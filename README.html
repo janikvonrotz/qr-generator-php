@@ -1,0 +1,57 @@
+<h1 id="about">About</h1>
+<p>This program outputs a QRcode as either a PNG, JPEG, or GIF.
+Max image size of 1480*1480 pixels.</p>
+<p>Supports QRcode version 1-40.</p>
+<p>Requires PHP4.1 and gd 1.6 or higher.</p>
+<h1 id="usage">Usage</h1>
+<p>qr.php?<br>d=[data]<br>&amp;e=[(L,M,Q,H)]<br>&amp;s=[int]<br>&amp;v=[(1-40)]<br>&amp;t=[(J,G)]<br>&amp;size=[int]<br>&amp;download=[filename]  </p>
+<h2 id="experimental">experimental</h2>
+<p>&amp;m=[(1-16)]<br>&amp;n=[(2-16)]<br>&amp;p=[(0-255)]<br>&amp;o=[data]  </p>
+<h1 id="parameter">Parameter</h1>
+<ul>
+<li>d = data URL encoded data.</li>
+<li>e = ECC level: L or M or Q or H (default M)</li>
+<li>s = module size (dafault PNG:4 JPEG:8)</li>
+<li>v = version 1-40 or Auto select if you do not set.</li>
+<li>t = image type J: jpeg image, G: GIF image, default: PNG image</li>
+<li>size = image size Integer. Specifies the width &amp; height of the image. Default 400. Max 1480.</li>
+<li>download = File name URL encoded filename. If set, the content disposition will change to tell the browser to download the file.</li>
+</ul>
+<h1 id="example">Example</h1>
+<p><code>index.php?d=hello&amp;e=Q&amp;t=J&amp;size=500&amp;download=test</code></p>
+<p>Will encode a QR code containin the word &quot;hello&quot; with Quartile error correction, as a JPG, 500px wide &amp; high, and prompt you to download it as a file called &quot;test.jpg&quot;.</p>
+<h2 id="experimental-parameter">Experimental Parameter</h2>
+<p>structured append  m of n (experimental):</p>
+<ul>
+<li>n = structure append n (2-16)</li>
+<li>m = structure append m (1-16)</li>
+<li>p = parity</li>
+<li>o = original data (URL encoded data)  for calculating parity</li>
+</ul>
+<h1 id="license">License</h1>
+<p>Original version (C)2000-2009,Y.Swetake (version 0.50i)
+From: <a href="http://www.venus.dti.ne.jp/~swe/program/qr_img0.50i.tar.gz">http://www.venus.dti.ne.jp/~swe/program/qr_img0.50i.tar.gz</a>
+<a href="http://www.swetake.com/qr/">http://www.swetake.com/qr/</a>
+Licenced as &quot;revised BSD License&quot; by the original author</p>
+<p>Subsequent Changes
+Copyright (c) 2012, Terence Eden
+All rights reserved.</p>
+<p>Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:</p>
+<ul>
+<li>Redistributions of source code must retain the above copyright notices, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright notices, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+<li>Neither the name of the software nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>
+</ul>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER(S) BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>The QR code standard is trademarked by Denso Wave, Inc.
+<a href="http://www.denso-wave.com/qrcode/index-e.html">http://www.denso-wave.com/qrcode/index-e.html</a></p>
